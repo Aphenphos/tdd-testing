@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import {
-    add, subtract, multiply
+    add, subtract, multiply, nameMaker
 } from './functions.js';
 
 const test = QUnit.test;
@@ -81,7 +81,7 @@ test('triangle area calcuator', (expect) => {
     expect.equal(actual, expected);
     
 });
-/* git
+/* 
     Write a function that takes in two 2 numbers
     and returns true if their sum is less than 100 or 
     false if it is greater than 100
@@ -147,6 +147,17 @@ test ('sum less than 100', (expect) => {
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
 */
+
+test ('name maker', (expect) => {
+    let firstName = 'Ruth';
+    let middleName = 'Bader';
+    let lastName = 'Ginsberg';
+    
+    const actual = nameMaker(firstName, middleName, lastName);
+    const expected = 'Ruth Bader Ginsberg';
+    expect.equal(actual, expected);
+    
+});
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
