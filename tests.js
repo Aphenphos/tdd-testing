@@ -71,8 +71,17 @@ test('minutes to seconds', (expect) => {
 
     Uses: Math operator(s)
 */
+test('triangle area calcuator', (expect) => {
+    const x = 5;
+    const y = 10;
+    const triangleAreaMultiplier = .5;
+    const expected = 25;
 
-/* 
+    const actual = multiply(x, y,) * triangleAreaMultiplier;
+    expect.equal(actual, expected);
+    
+});
+/* git
     Write a function that takes in two 2 numbers
     and returns true if their sum is less than 100 or 
     false if it is greater than 100
