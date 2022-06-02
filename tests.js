@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import {
-    add,
+    add, subtract, multiply, nameMaker, oddOrEven,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -38,7 +38,14 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator
 */
-
+test('subtract two numbers', (expect) => {
+    const x = 12;
+    const y = 8;
+    const expected = 4;
+    
+    const actual = subtract(x, y);
+    expect.equal(actual, expected);
+});
 /* 
     Write a function that takes in number of minutes
     and returns the number of seconds
@@ -47,6 +54,14 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+test('minutes to seconds', (expect) => {
+    const x = 10;
+    const y = 60;
+    const expected = 600;
+
+    const actual = multiply(x, y);
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes in the base and height
@@ -56,7 +71,16 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+test('triangle area calcuator', (expect) => {
+    const x = 5;
+    const y = 10;
+    const triangleAreaMultiplier = .5;
+    const expected = 25;
 
+    const actual = multiply(x, y,) * triangleAreaMultiplier;
+    expect.equal(actual, expected);
+    
+});
 /* 
     Write a function that takes in two 2 numbers
     and returns true if their sum is less than 100 or 
@@ -69,6 +93,25 @@ test('adds two numbers', (expect) => {
     Uses: Comparison operator(s), if/else control flow
 */
 
+test ('sum less than 100', (expect) => {
+    const expected = true;
+    if (add(25, 13) < 100){
+        const actual = true;
+        expect.equal(actual, expected);
+    } else {const actual = false;
+        expect.equal(actual, expected);
+    }
+
+    const expectedTwo = false;
+    if (add(88, 60) < 100){
+        const actual = true;
+        expect.equal(actual, expectedTwo); 
+    } else {const actual = false;
+        expect.equal(actual, expectedTwo);
+    }
+
+});
+
 /* 
     Write a function that takes a number and
     and returns 'even' if number is even, otherwise 'odd'.
@@ -78,6 +121,14 @@ test('adds two numbers', (expect) => {
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
 */
+
+test ('odd or even', (expect) => {
+    const x = 3;
+    const expected = 'odd';
+
+    const actual = oddOrEven(x);
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws
@@ -93,7 +144,23 @@ test('adds two numbers', (expect) => {
 
     Uses: comparison operator, if/else control flow
 */
+/*test('rock paper scissors', (expect) => {
+    const rock = 'rock';
+    const paper = 'paper';
+    const scissors = 'scissors';
+    const actualOne = rockPaperScissors(rock + scissors);
+    const actualTwo = rockPaperScissors(rock + paper);
+    const actualThree = rockPaperScissors(rock + rock);
 
+    const expectedOne = 'player 1 wins';
+    const expectedTwo = 'player 1 wins';
+    const expectedThree = 'draw';
+
+    expect.equal(actualOne, expectedOne);
+    expect.equal(actualTwo, expectedTwo);
+    expect.equal(actualThree, expectedThree);
+});
+*/
 /* 
     Write a function that takes in a first, last, and a third optional
     middle name parameter and returns a correctly formatted name
@@ -105,7 +172,18 @@ test('adds two numbers', (expect) => {
     existence comparison operator, if control flow
 */
 
-/* 
+test ('name maker', (expect) => {
+    let firstName = 'Ruth';
+    let middleName = 'Bader';
+    let lastName = 'Ginsberg';
+    
+    const actual = nameMaker(firstName, middleName, lastName);
+    const expected = 'Ruth Bader Ginsberg';
+    expect.equal(actual, expected);
+    
+});
+
+/*
     Write a function that takes a name, type, age, food, and a toys array
     and returns an object like:
 
@@ -118,8 +196,25 @@ test('adds two numbers', (expect) => {
     }
 
     Uses: object literal syntax, deepEqual assertion
-*/
 
+test ('pet traits', (expect) => {
+    const name = 'felix';
+    const type = 'cat';
+    const age = '6';
+    const food = 'tuna';
+    const toys = ['feather chaser', 'laser pointer', 'ball of yarn'];
+
+    const actual = petTraits(name, type, age, food, toys);
+    const expected = tostring(
+        name: 'felix',
+        type: 'cat',
+        age: 6,
+        food: 'tuna',
+        toys: ['feather chaser', 'laser pointer', 'ball of yarn'])
+    
+    expect.equal(actual, expected);
+
+});
 /*
     Write a function that takes a number
     and returns the total of all counting numbers from 1 to the supplied number
@@ -128,6 +223,7 @@ test('adds two numbers', (expect) => {
 
     Uses: let variable with reassignment, math operator, for...i loop
 */
+
 
 /*
     Write a function that takes name of three pets
