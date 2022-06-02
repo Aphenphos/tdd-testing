@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import {
-    add, subtract, multiply, nameMaker, oddOrEven, rockPaperScissors
+    add, subtract, multiply, nameMaker, oddOrEven,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -183,7 +183,7 @@ test ('name maker', (expect) => {
     
 });
 
-
+/*
     Write a function that takes a name, type, age, food, and a toys array
     and returns an object like:
 
