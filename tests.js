@@ -84,6 +84,25 @@ test('minutes to seconds', (expect) => {
     Uses: Comparison operator(s), if/else control flow
 */
 
+test ('sum less than 100', (expect) => {
+    var expected = true;
+    if (add(25, 13) < 100){
+        const actual = true;
+        expect.equal(actual, expected);
+    } else {const actual = false;
+        expect.equal(actual, expected);
+    }
+
+    var expectedTwo = false;
+    if (add(88, 60) < 100){
+        const actual = true;
+        expect.equal(actual, expectedTwo); 
+    } else {const actual = false;
+        expect.equal(actual, expectedTwo);
+    }
+
+});
+
 /* 
     Write a function that takes a number and
     and returns 'even' if number is even, otherwise 'odd'.
