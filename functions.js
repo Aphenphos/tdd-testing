@@ -25,6 +25,10 @@ export function oddOrEven(x) {
 }
 
 export function petTraits(name, type, age, food, toys){
-    return `name ${petName}`
+    return `name: ${name}\n 
+    type: ${type}
+    age: ${age}
+    food: ${food}
+    toys: ${toys}`;
 }
 

@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import {
-    add, subtract, multiply, nameMaker, oddOrEven
+    add, subtract, multiply, nameMaker, oddOrEven, pet, petTraits
 } from './functions.js';
 
 const test = QUnit.test;
@@ -181,7 +181,24 @@ test ('name maker', (expect) => {
 
     Uses: object literal syntax, deepEqual assertion
 */
+test ('pet traits', (expect) => {
+    const name = 'felix';
+    const type = 'cat';
+    const age = '6';
+    const food = 'tuna';
+    const toys = ['feather chaser', 'laser pointer', 'ball of yarn'];
 
+    const actual = petTraits(name, type, age, food, toys);
+    const expected = tostring(
+        name: 'felix',
+        type: 'cat',
+        age: 6,
+        food: 'tuna',
+        toys: ['feather chaser', 'laser pointer', 'ball of yarn'])
+    
+    expect.equal(actual, expected);
+
+});
 /*
     Write a function that takes a number
     and returns the total of all counting numbers from 1 to the supplied number
