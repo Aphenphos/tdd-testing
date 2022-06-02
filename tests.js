@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import {
-    add, subtract, multiply, nameMaker, oddOrEven, pet, petTraits
+    add, subtract, multiply, nameMaker, oddOrEven, rockPaperScissors
 } from './functions.js';
 
 const test = QUnit.test;
@@ -94,7 +94,7 @@ test('triangle area calcuator', (expect) => {
 */
 
 test ('sum less than 100', (expect) => {
-    var expected = true;
+    const expected = true;
     if (add(25, 13) < 100){
         const actual = true;
         expect.equal(actual, expected);
@@ -102,7 +102,7 @@ test ('sum less than 100', (expect) => {
         expect.equal(actual, expected);
     }
 
-    var expectedTwo = false;
+    const expectedTwo = false;
     if (add(88, 60) < 100){
         const actual = true;
         expect.equal(actual, expectedTwo); 
@@ -144,7 +144,23 @@ test ('odd or even', (expect) => {
 
     Uses: comparison operator, if/else control flow
 */
+/*test('rock paper scissors', (expect) => {
+    const rock = 'rock';
+    const paper = 'paper';
+    const scissors = 'scissors';
+    const actualOne = rockPaperScissors(rock + scissors);
+    const actualTwo = rockPaperScissors(rock + paper);
+    const actualThree = rockPaperScissors(rock + rock);
 
+    const expectedOne = 'player 1 wins';
+    const expectedTwo = 'player 2 wins';
+    const expectedThree = 'player 3 wins';
+
+    expect.equal(actualOne, expectedOne);
+    expect.equal(actualTwo, expectedTwo);
+    expect.equal(actualThree, expectedThree);
+});
+*/
 /* 
     Write a function that takes in a first, last, and a third optional
     middle name parameter and returns a correctly formatted name
@@ -181,7 +197,7 @@ test ('name maker', (expect) => {
 
     Uses: object literal syntax, deepEqual assertion
 */
-test ('pet traits', (expect) => {
+/*test ('pet traits', (expect) => {
     const name = 'felix';
     const type = 'cat';
     const age = '6';
@@ -199,6 +215,7 @@ test ('pet traits', (expect) => {
     expect.equal(actual, expected);
 
 });
+*/
 /*
     Write a function that takes a number
     and returns the total of all counting numbers from 1 to the supplied number
