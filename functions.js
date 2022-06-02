@@ -16,6 +16,15 @@ export function nameMaker(firstName, middleName, lastName) {
         return `${firstName} ${lastName}`;
     }
     return `${firstName} ${middleName} ${lastName}`;
-
-   
 }
+
+export function oddOrEven(x) {
+    if ((x % 2) === 0){
+        return 'even';
+    } else return 'odd';
+}
+
+export function petTraits(name, type, age, food, toys){
+    return `name ${petName}`
+}
+

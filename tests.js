@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import {
-    add, subtract, multiply, nameMaker
+    add, subtract, multiply, nameMaker, oddOrEven
 } from './functions.js';
 
 const test = QUnit.test;
@@ -121,6 +121,14 @@ test ('sum less than 100', (expect) => {
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
 */
+
+test ('odd or even', (expect) => {
+    const x = 3;
+    const expected = 'odd';
+
+    const actual = oddOrEven(x);
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws
