@@ -153,8 +153,8 @@ test ('odd or even', (expect) => {
     const actualThree = rockPaperScissors(rock + rock);
 
     const expectedOne = 'player 1 wins';
-    const expectedTwo = 'player 2 wins';
-    const expectedThree = 'player 3 wins';
+    const expectedTwo = 'player 1 wins';
+    const expectedThree = 'draw';
 
     expect.equal(actualOne, expectedOne);
     expect.equal(actualTwo, expectedTwo);
@@ -183,7 +183,7 @@ test ('name maker', (expect) => {
     
 });
 
-/* 
+
     Write a function that takes a name, type, age, food, and a toys array
     and returns an object like:
 
@@ -196,8 +196,8 @@ test ('name maker', (expect) => {
     }
 
     Uses: object literal syntax, deepEqual assertion
-*/
-/*test ('pet traits', (expect) => {
+
+test ('pet traits', (expect) => {
     const name = 'felix';
     const type = 'cat';
     const age = '6';
@@ -215,7 +215,6 @@ test ('name maker', (expect) => {
     expect.equal(actual, expected);
 
 });
-*/
 /*
     Write a function that takes a number
     and returns the total of all counting numbers from 1 to the supplied number
@@ -224,6 +223,7 @@ test ('name maker', (expect) => {
 
     Uses: let variable with reassignment, math operator, for...i loop
 */
+
 
 /*
     Write a function that takes name of three pets

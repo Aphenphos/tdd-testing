@@ -32,21 +32,7 @@ export function petTraits(name, type, age, food, toys){
     toys: ${toys}`;
 }
 
-export function rockPaperScissors(rock,paper,scissors) {
-    if (paper + rock){
-        'player 1 wins';
-    } if (scissors + paper){
-        'player 1 wins';
-    } if (rock + scissors) {
-        'play 1 wins';
-    } if (scissors + paper) {
-        'player 1 wins';
-    } if (paper + paper) {
-        'draw';
-    } if (rock + rock) {
-        'draw';
-    } if (scissors + scissors) {
-        'draw';
-    } else {
-        'player 2 wins';
-    }}
+/*export function rockPaperScissors(playerOne, playerTwo) {
+    if
+
+};*/
