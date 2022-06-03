@@ -32,6 +32,14 @@ export function petTraits(name, type, age, food, toys){
     toys: ${toys}`;
 }
 
+export function greaterOrLess(x, y, max) {
+    if (add(x, y) < max){
+        return 'true';
+    } else {
+        return 'false';
+    }
+}
+
 /*export function rockPaperScissors(playerOne, playerTwo) {
     if
 

@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import {
-    add, subtract, multiply, nameMaker, oddOrEven,
+    add, subtract, multiply, nameMaker, oddOrEven, greaterOrLess,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -94,21 +94,15 @@ test('triangle area calcuator', (expect) => {
 */
 
 test ('sum less than 100', (expect) => {
-    const expected = true;
-    if (add(25, 13) < 100){
-        const actual = true;
-        expect.equal(actual, expected);
-    } else {const actual = false;
-        expect.equal(actual, expected);
-    }
+    const expectedOne = 'true';
+    const expectedTwo = 'false';
 
-    const expectedTwo = false;
-    if (add(88, 60) < 100){
-        const actual = true;
-        expect.equal(actual, expectedTwo); 
-    } else {const actual = false;
-        expect.equal(actual, expectedTwo);
-    }
+
+    const actualOne = greaterOrLess(25, 13, 100);
+    const actualTwo = greaterOrLess(88, 60, 100);
+
+    expect.equal(actualOne, expectedOne);
+    expect.equal(actualTwo, expectedTwo);
 
 });
 
